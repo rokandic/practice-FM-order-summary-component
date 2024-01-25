@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);    
+    --bright-blue-shadow: hsl(245, 75%, 52%,20%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --form-width: 28rem;
+    --form-height: 43.75rem;
+}
+
+html {
+    font-size: 1.0rem;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;    
+    background-size: 100% 50%;
+    background-color: var(--pale-blue);
+}
+
+.spacer {
+    margin: 1rem 0;
+
+}
+
+main {
+    max-width: var(--form-width);
+    min-height: var(--form-height);
+    background-color: white;
+    border-radius: 20px;   
+    overflow: hidden;
+}
+
+#order-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2.5rem 3rem;    
+}
+
+#banner {
+    width: 100%;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 1.75rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.25rem;
+}
+
+p {
+    color: var(--desaturated-blue);
+    font-size: 1.05rem;
+}
+
+p#description {
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1.0rem;
+    line-height: 1.6rem;
+}
+
+.order-item {
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    min-width: 100%;
+    margin-top: 1.0rem;
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-item p {
+    text-align: center;
+    line-height: 1.6rem;
+
+}
+
+.order-item .plan-price .plan {
+    font-size: 1.0rem;
+    font-weight: 900;
+    color: var(--dark-blue);    
+}
+
+.order-item .plan-price {
+    position: relative;
+    left: -2.25rem;
+}
+
+.order-item .plan-price .price {
+    margin-top: 0.15rem;
+    
+}
+
+.order-item a {
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: var(--bright-blue);
+}
+
+.order-item a:hover {
+    text-decoration: none;
+    opacity: 75%;
+}
+
+.order-item .icon {
+    width: 3rem;
+}
+
+#proceed {
+    background-color: var(--bright-blue);
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.95rem 0rem;
+    margin-top: 1.75rem;
+    border-radius: 10px;    
+    box-shadow: 4px 14px 20px 0px var(--bright-blue-shadow);
+}
+
+#proceed:hover {
+    opacity: 75%;
+}
+
+#cancel {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    margin-top: 2rem;
+    font-weight: 900;
+    font-size: 0.95rem;
+}
+
+
+#cancel:hover {
+    color: var(--dark-blue);
+}
+
+footer { 
+    margin: 1rem 0;
+    font-size: 0.75rem; 
+    text-align: center; 
+}
+
+footer a { 
+    color: var(--bright-blue); 
+}
+
+
+@media screen and (max-width: 30rem) {
+    main {
+        max-width: 20.5rem;
+        min-height: 35.5rem;
+    }
+
+    #order-summary {
+        padding: 1.75rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    p#description {
+        font-size: 0.95rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .order-item {
+        padding: 1rem;     
+        margin-top: 1.5rem;   
+    }
+
+    .order-item p {
+        font-size: 0.9rem;
+    }
+
+    .order-item .plan-price {
+        left: -1rem;
+    }
+
+    .order-item .plan-price .plan {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .order-item .plan-price .price {
+        margin-top: -0.15rem;
+    }
+
+    .order-item a {
+        font-size: 0.8rem;
+    }
+
+    #proceed {
+        margin-top: 1.25rem;
+    }
+
+    #cancel {
+        margin-top: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.65rem;
+    }
+}
