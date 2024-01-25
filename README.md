@@ -17,10 +17,10 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 
 ### Links
 
-- [Live Site]()
+- [Live Site](https://rokandic.github.io/practice-FM-order-summary-component/)
 
 ### Built with
 
 - HTML
-- CSS Flexbox
-- CSS Grid
+- CSS custom properties 
+- Flexbox
